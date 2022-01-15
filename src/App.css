@@ -5,6 +5,9 @@
 
 html, body {
   background-color: #282c34;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .App {
@@ -121,4 +124,19 @@ a:visited {
 .hidden {
   opacity: .0001;
   position: absolute;
+}
+
+.picker-dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+#colorPickers {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+}
+
+.picker-dot {
+  margin: 20px 0;
 }

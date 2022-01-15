@@ -1,9 +1,10 @@
 
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react';
 
-const Canvas = props => {
+const Canvas = ({canvasColor1, canvasColor2}) => {
 
-    const canvasRef = useRef(null)
+    const canvasRef = useRef(null);
+    
 
     useEffect(() => {
 
@@ -70,7 +71,8 @@ const Canvas = props => {
             }
 
             function drawSpoke(point, direction) {
-                var color = direction === -1 ? "#85BBFD" : "#1E6DCE";
+                
+                var color = direction === -1 ? canvasColor1 : canvasColor2;
 
                 var branchAngle = point.angle + (angle * direction);
                 var size = point.size * scale;
@@ -114,9 +116,9 @@ const Canvas = props => {
         }
 
         draw();
-    }, [])
+    }, [{canvasColor1, canvasColor2}])
 
-    return <canvas ref={canvasRef} {...props} />
+    return <canvas ref={canvasRef} canvasColor1={canvasColor1} canvasColor2={canvasColor1} />
 }
 
 export default Canvas
