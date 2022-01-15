@@ -133,7 +133,7 @@ a:visited {
 }
 #colorPickers {
   position: fixed;
-  top: 50%;
+  bottom: 10px;
   right: 10px;
 }
 
