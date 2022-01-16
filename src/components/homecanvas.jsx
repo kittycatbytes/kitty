@@ -1,7 +1,6 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 
-console.log("first");
 
 function getColor1() {
     return localStorage.getItem('color1');
@@ -11,12 +10,10 @@ function getColor2() {
 }
 
 const Canvas = () => {
-    console.log("second");
 
     const canvasRef = useRef(null);
 
     useEffect(() => {
-        console.log("third");
 
         var size = 180;
         var scale = .8;
