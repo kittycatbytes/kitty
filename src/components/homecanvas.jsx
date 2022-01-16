@@ -1,12 +1,22 @@
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
-const Canvas = ({canvasColor1, canvasColor2}) => {
+console.log("first");
+
+function getColor1() {
+    return localStorage.getItem('color1');
+}
+function getColor2() {
+    return localStorage.getItem('color2');
+}
+
+const Canvas = () => {
+    console.log("second");
 
     const canvasRef = useRef(null);
-    
 
     useEffect(() => {
+        console.log("third");
 
         var size = 180;
         var scale = .8;
@@ -71,8 +81,8 @@ const Canvas = ({canvasColor1, canvasColor2}) => {
             }
 
             function drawSpoke(point, direction) {
-                
-                var color = direction === -1 ? canvasColor1 : canvasColor2;
+
+                var color = direction === -1 ? getColor1() : getColor2();
 
                 var branchAngle = point.angle + (angle * direction);
                 var size = point.size * scale;
@@ -116,9 +126,11 @@ const Canvas = ({canvasColor1, canvasColor2}) => {
         }
 
         draw();
-    }, [{canvasColor1, canvasColor2}])
+    }, [])
 
-    return <canvas ref={canvasRef} canvasColor1={canvasColor1} canvasColor2={canvasColor1} />
+    return <canvas ref={canvasRef} />
 }
+
+
 
 export default Canvas

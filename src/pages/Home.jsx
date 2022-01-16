@@ -7,15 +7,21 @@ const Home = (props) => {
   const [colorPicked2, setColorPicked2] = useState("#1E6DCE");
   var self = this;
 
+  localStorage.setItem('color1', colorPicked1);
+  localStorage.setItem('color2', colorPicked2);
+
   const inputchangehandler1 = (color) => {
     console.log(color.hex);
     setColorPicked1(color.hex);
     console.log("iscolorset1:" + colorPicked1);
+    localStorage.setItem('color1', colorPicked1);
+
   }
   const inputchangehandler2 = (color) => {
     console.log(color.hex);
     setColorPicked2(color.hex);
-    console.log("iscolorset2:" + colorPicked2);
+    console.log("iscolorset2:" + colorPicked2); 
+    localStorage.setItem('color2', colorPicked2);
   }
 
   return <div id="home">
