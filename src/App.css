@@ -47,15 +47,31 @@ html, body {
 canvas {
   margin-top: 50px;
 }
-.home-subtitle {
-  text-align: center;
-  font-size: 12px;
-  opacity: .02;
-  padding: 10px;
-  transition: opacity 1s ease-in;
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  10% {
+      opacity: 1;
+   }
+   90% {
+    opacity: 1;
+ }
+ 100% {
+  opacity: 0;
 }
-#home:hover .home-subtitle {
-  opacity: 1;
+ 
+}
+
+#quotes {
+  text-align: center;
+  font-size: 14px;
+  padding: 30px 0;
+  font-family: Metropolitan;
+  animation: fadeInAnimation ease 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 .top-nav {
