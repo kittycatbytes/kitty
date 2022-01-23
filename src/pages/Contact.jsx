@@ -3,7 +3,22 @@
 const Contact = () => {
     return (
         <div id="contact">
-            <div class="graffiti">kittycatbytes</div><br></br>
+            <div class="announce">THE INTERNET PRESENTS</div>
+            <div class="letters">
+            <div class="bytes">k</div>
+            <div class="bytes">i</div>
+            <div class="bytes">t</div>
+            <div class="bytes">t</div>
+            <div class="bytes">y</div>
+            <div class="bytes">c</div>
+            <div class="bytes">a</div>
+            <div class="bytes">t</div>
+            <div class="bytes">b</div>
+            <div class="bytes">y</div>
+            <div class="bytes">t</div>
+            <div class="bytes">e</div>
+            <div class="bytes">s</div>
+            </div>
             <div id="contactCards">
                 <a href="http://instagram.com/dariamayfair" target="_blank">
                     <img width="80px" height="80px" src="/images/IG.png"></img>
@@ -21,11 +36,7 @@ const Contact = () => {
                     <img width="80px" height="80px" src="/images/linkedin.png"></img>
                 </a>
             </div>
-            <div href="" class="hidden">
-            <img width="80px" height="80px" src="../assets/bricks-plain.svg"></img>
         </div>
-        </div>
-       
     );
 };
 

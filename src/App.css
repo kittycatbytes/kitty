@@ -1,6 +1,16 @@
 @font-face {
-  font-family: kitty-graffiti;
-  src: url(fonts/AttackGraffiti.ttf);
+  font-family: UglyByte;
+  src: url(fonts/UglyByte.otf);
+}
+
+@font-face {
+  font-family: Metropolis;
+  src: url(fonts/Metropolis.ttf);
+}
+
+@font-face {
+  font-family: ShogekingOniki;
+  src: url(fonts/ShogekingOniki.otf);
 }
 
 html, body {
@@ -12,7 +22,7 @@ html, body {
 
 .App {
   text-align: center;
-  font-family: kitty-graffiti;
+  font-family: UglyByte;
 }
 
 .load-font {
@@ -31,7 +41,7 @@ html, body {
   font-size: calc(10px + 2vmin);
   color: white;
   font-size: 40px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: ShogekingOniki;
 }
 
 canvas {
@@ -50,20 +60,22 @@ canvas {
 
 .top-nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   list-style: none;
   width: 100%;
-  opacity: 0.7;
   position: absolute;
-  background: #282c34;
+  background: transparent;
 }
 .nav-link {
   text-decoration: none;
+
   color: white;
 }
 .nav-link.active,
 .nav-link:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: all;
 }
 
 a:visited {
@@ -91,7 +103,7 @@ a:visited {
 }
 
 #contactCards a:hover img {
-  filter: drop-shadow(0px 0px 7px black);
+  filter: drop-shadow(0px 0px 7px rgba(0 0 0 / .3));
   transform: scale(1.1);
 }
 
@@ -103,14 +115,42 @@ a:visited {
   padding-top: 100px;
 }
 
-.graffiti {
-  font-family: kitty-graffiti;
-  color: greenyellow;
-  font-size: 70px;
+.announce {
+  font-family: Metropolis;
+  font-size: 25px;
+  color: white;
+  padding: 10px 0;
+}
+.letters {
+  display: flex;
+  font-family: UglyByte;
+  background: linear-gradient(
+    to top, 
+    #3384ff, 
+    #d1e2ff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 150px;
+  justify-content: center;
+}
+@keyframes borderBlink {    
+  from, to {    
+      border-color: white;  
+  }    
+  50% {    
+      border-color: transparent; 
+  }    
+} 
+.bytes:hover {
+  border-left: 1px solid white;
+  animation: borderBlink 1s step-end infinite;  
 }
 
 @media only screen and (max-width: 600px) {
-  .graffiti {
+  .bytes {
     font-size: 12vw;
   }
 }
