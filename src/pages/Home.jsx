@@ -24,10 +24,10 @@ const Home = (props) => {
   ];
 
   const shuffle = useCallback(() => {
-    if (index === 11) {
+    index++;
+    if (index === 12) {
       index = 0;
     }
-    index++;
     setQuote(quotes[index]);
   }, []);
 
