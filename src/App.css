@@ -67,9 +67,9 @@ canvas {
 #quotes {
   text-align: center;
   font-size: 14px;
-  padding: 30px 0;
+  margin: 30px 0;
   font-family: Metropolitan;
-  /*    */
+  background-color: #282c34;
 }
 
 .fadeInOut {
@@ -166,9 +166,27 @@ a:visited {
   animation: borderBlink 1s step-end infinite;
 }
 
-@media only screen and (max-width: 600px) {
-  .bytes {
-    font-size: 12vw;
+@media only screen and (max-width: 650px) {
+  canvas {
+    margin-top: -20px;
+  }
+  .letters {
+    font-size: 100px;
+    font-family: UglyByte;
+    background: none;
+    -webkit-text-fill-color: #d1e2ff;
+  }
+  #quotes {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-family: Metropolitan;
+  }
+  #colorPickers {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
   }
 }
 
@@ -184,7 +202,7 @@ a:visited {
 }
 #colorPickers {
   position: fixed;
-  bottom: 10px;
+  bottom: 50px;
   right: 10px;
 }
 
