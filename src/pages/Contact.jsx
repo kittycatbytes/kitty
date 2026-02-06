@@ -26,9 +26,6 @@ const Contact = () => {
                 <a href="mailto:cat@kittycatbytes.com" target="_blank">
                     <img width="80px" height="80px" src="/images/email.png"></img>
                 </a>
-                <a href="http://twitter.com/kittycatbytes" target="_blank">
-                    <img width="80px" height="80px" src="/images/twitter.png"></img>
-                </a>
                 <a href="https://kittycatbytes.wordpress.com/" target="_blank">
                     <img width="80px" height="80px" src="/images/wordpress.png" alt="Ramblings"></img>
                 </a>
